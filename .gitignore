@@ -1,0 +1,15 @@
+# A sajat halozatod eszkozei — SOHA ne kerulhessen be
+whitelist.json
+known_devices.json
+
+# Futasi allapot es jelentes
+wifi-watchdog-jelenlet-allapot.json
+wifi-watchdog-legutobbi-futas.md
+wifi_watchdog_ertesites_szamlalo.txt
+
+# Sajat wrapperek (a .example valtozatok vannak verziozva)
+bin/mikrotik-ssh.sh
+bin/ha-api.sh
+
+__pycache__/
+*.pyc

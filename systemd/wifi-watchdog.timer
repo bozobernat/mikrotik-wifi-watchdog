@@ -1,0 +1,12 @@
+[Unit]
+Description=WiFi watchdog — 15 percenkenti ravasz
+
+[Timer]
+OnCalendar=*:0/15
+# Ha a gep nem jart mindig, indulas utan bepotolja a kimaradt idopontot.
+Persistent=true
+RandomizedDelaySec=30
+Unit=wifi-watchdog.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,9 @@
+{
+  "generated": "2026-01-01",
+  "note": "Ismert (sajat) eszkozok listaja. A szkript CSAK a 'mac' mezot hasznalja; a tobbi az ember kedveert van. Ezt a fajlt te toltod fel a sajat halozatod eszkozeivel.",
+  "devices": [
+    { "mac": "AA:BB:CC:DD:EE:01", "label": "Nappali TV",        "source": "kezi" },
+    { "mac": "AA:BB:CC:DD:EE:02", "label": "Munka laptop",      "source": "kezi" },
+    { "mac": "AA:BB:CC:DD:EE:03", "label": "Telefon (sajat)",   "source": "dhcp-lease" }
+  ]
+}

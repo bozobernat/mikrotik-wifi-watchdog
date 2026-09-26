@@ -1,0 +1,16 @@
+[Unit]
+Description=WiFi watchdog (wifi_watchdog.py) — ismeretlen eszkoz eszlelese a WiFi-n
+ConditionPathExists=/opt/wifi-watchdog/wifi_watchdog.py
+
+[Service]
+Type=oneshot
+User=wifi-watchdog
+Group=wifi-watchdog
+WorkingDirectory=/opt/wifi-watchdog
+Environment=WIFI_WATCHDOG_ROUTER_CMD=/opt/wifi-watchdog/bin/mikrotik-ssh.sh
+Environment=WIFI_WATCHDOG_NOTIFY_CMD=/opt/wifi-watchdog/bin/ha-api.sh
+Environment=WIFI_WATCHDOG_NOTIFY_SERVICE=/api/services/notify/notify
+ExecStart=/usr/bin/python3 /opt/wifi-watchdog/wifi_watchdog.py
+# 1-gyel lep ki, ha uj idegen eszkozt talalt — ez NEM hiba, csak jelzes.
+SuccessExitStatus=0 1
+TimeoutStartSec=60

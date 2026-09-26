@@ -1,0 +1,11 @@
+[
+  {
+    "mac": "AA:BB:CC:DD:EE:01",
+    "ip": "192.0.2.10",
+    "hostname": "nappali-tv",
+    "comment": "statikus lease",
+    "ha_label": "Nappali TV",
+    "label": "Nappali TV",
+    "source": "dhcp-lease"
+  }
+]

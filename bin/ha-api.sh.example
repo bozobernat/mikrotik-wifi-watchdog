@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Home Assistant REST API hivas. Harom argumentum: METODUS, UTVONAL, TORZS.
+#
+#   ./ha-api.sh POST /api/services/notify/notify '{"title":"x","message":"y"}'
+#
+# A tokent NE ide ird: tedd egy 0600-as curlrc-be (--header "Authorization: Bearer ...").
+set -euo pipefail
+HA_URL="${HA_URL:-http://homeassistant.local:8123}"
+HA_CURLRC="${HA_CURLRC:-$HOME/.config/ha/curlrc}"
+exec curl -sS --config "$HA_CURLRC" \
+     -X "$1" -H 'Content-Type: application/json' \
+     ${3:+--data "$3"} "${HA_URL}$2"
